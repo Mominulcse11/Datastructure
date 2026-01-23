@@ -1,0 +1,286 @@
+<<<<<<< HEAD
+Good. Doubly linked list is where **people think it’s easier** and then silently lose marks.
+Why? Because now **two links must stay consistent**. Break one → instant bug.
+
+Below is a **strict, exam-grade DOUBLY LINKED LIST cheat sheet**.
+No fluff. This is **what to check, where, and why**.
+
+---
+=======
+
+>>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2
+
+# 🔁 DOUBLY LINKED LIST — COMPLETE CHEAT SHEET
+
+---
+
+## 🧠 NODE STRUCTURE (LOCK THIS IN)
+
+```c
+struct Node {
+    int data;
+    struct Node *prev;
+    struct Node *next;
+};
+```
+
+**Invariant**
+
+* `head->prev == NULL`
+* `last->next == NULL`
+
+Break either → list corrupted.
+
+---
+
+## 🔹 BASIC STATES (CHECK FIRST)
+
+| Condition            | Meaning     |
+| -------------------- | ----------- |
+| `head == NULL`       | Empty list  |
+| `head->next == NULL` | Single node |
+
+You must branch logic on these.
+
+---
+
+## 🔹 1️⃣ INSERT OPERATIONS
+
+---
+
+### 🔸 A. Insert at BEGINNING
+
+#### Required Cases
+
+| Case      | Action         |
+| --------- | -------------- |
+| Empty     | head = new     |
+| Non-empty | update 4 links |
+
+#### Correct Order
+
+```c
+new->next = head;
+new->prev = NULL;
+head->prev = new;
+head = new;
+```
+
+❌ Forget `head->prev` → broken backward traversal
+
+---
+
+### 🔸 B. Insert at END
+
+#### Required Cases
+
+| Case      | Action           |
+| --------- | ---------------- |
+| Empty     | head = new       |
+| Non-empty | traverse to last |
+
+#### Logic
+
+```c
+last->next = new;
+new->prev = last;
+new->next = NULL;
+```
+
+---
+
+### 🔸 C. Insert at K-th Position
+
+#### MUST HANDLE
+
+| Case             |
+| ---------------- |
+| Empty (k=1 only) |
+| k = 1            |
+| k > length+1     |
+| Middle           |
+| End              |
+
+#### Pointer Updates (ORDER MATTERS)
+
+```c
+new->next = temp->next;
+new->prev = temp;
+temp->next->prev = new;
+temp->next = new;
+```
+
+❌ Miss one pointer → dangling prev/next
+
+---
+
+## 🔹 2️⃣ DELETE OPERATIONS (MARKS KILLER)
+
+---
+
+### 🔸 A. Delete at BEGINNING
+
+#### Cases
+
+| Case     | Action             |
+| -------- | ------------------ |
+| Empty    | Underflow          |
+| Single   | free + head = NULL |
+| Multiple | move head          |
+
+#### Logic
+
+```c
+head = head->next;
+head->prev = NULL;
+```
+
+---
+
+### 🔸 B. Delete at END
+
+#### Cases
+
+| Case     | Action             |
+| -------- | ------------------ |
+| Empty    | Underflow          |
+| Single   | free + head = NULL |
+| Multiple | unlink last        |
+
+#### Logic
+
+```c
+last = last->prev;
+last->next = NULL;
+```
+
+---
+
+### 🔸 C. Delete by VALUE (**MOST IMPORTANT**)
+
+#### REQUIRED CASES
+
+| Case            | Mandatory |
+| --------------- | --------- |
+| Empty           | ✔         |
+| Value at head   | ✔         |
+| Value in middle | ✔         |
+| Value at end    | ✔         |
+| Value not found | ✔         |
+
+#### Middle Node Deletion
+
+```c
+temp->prev->next = temp->next;
+temp->next->prev = temp->prev;
+```
+
+❌ Missing either line = broken list
+
+---
+
+### 🔸 D. Delete at K-th Position
+
+#### MUST CHECK
+
+| Condition  |
+| ---------- |
+| Empty      |
+| k ≤ 0      |
+| k = 1      |
+| k > length |
+
+---
+
+## 🔹 3️⃣ TRAVERSE
+
+---
+
+### Forward Traversal
+
+<<<<<<< HEAD
+```c
+=======
+```
+>>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2
+while(temp != NULL)
+```
+
+### Backward Traversal
+
+```c
+while(temp->next != NULL)
+temp = temp->next;
+
+while(temp != NULL)
+temp = temp->prev;
+```
+
+❌ Forgetting backward traversal loses marks
+
+---
+
+## 🔹 4️⃣ SEARCH
+
+Same as singly list:
+
+```c
+while(temp != NULL)
+```
+
+---
+
+## 🔹 5️⃣ REVERSE DOUBLY LIST (INTERVIEW FAVORITE)
+
+```c
+temp = NULL;
+curr = head;
+
+while(curr != NULL){
+    temp = curr->prev;
+    curr->prev = curr->next;
+    curr->next = temp;
+    curr = curr->prev;
+}
+if(temp != NULL)
+    head = temp->prev;
+```
+
+❌ Wrong head update = instant fail
+
+---
+
+## 🔥 POINTER UPDATE GOLDEN RULE
+
+> **Every insert/delete touches exactly 4 pointers**
+
+If you changed fewer → wrong
+If you changed more → dangerous
+
+---
+
+## 💀 COMMON DOUBLY LIST MISTAKES
+
+❌ Forgetting `prev` updates
+❌ Wrong pointer order
+❌ Accessing `temp->next->prev` without NULL check
+❌ Deleting head without resetting `prev`
+❌ Assuming backward traversal works automatically
+
+---
+
+## 🧠 FINAL REALITY CHECK
+
+Singly list → 1 direction
+Doubly list → **2 directions, double responsibility**
+
+If you don’t consciously think:
+
+> “Which prev and which next am I touching?”
+
+You’re guessing — not coding.
+
+<<<<<<< HEAD
+---
+=======
+>>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2

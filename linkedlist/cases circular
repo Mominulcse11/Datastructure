@@ -1,0 +1,268 @@
+<<<<<<< HEAD
+Good choice.
+Circular lists are where **lazy thinking gets punished**. One wrong condition → infinite loop → instant fail.
+
+Below is the **no-bullshit, exam-ready cheat sheet** for **CIRCULAR LINKED LIST**.
+
+---
+=======
+>>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2
+
+# 🔁 CIRCULAR LINKED LIST — COMPLETE CHEAT SHEET
+
+(Assume **singly circular linked list**)
+
+---
+
+## 🧠 CORE RULE (NON-NEGOTIABLE)
+
+> **Last node’s `next` points to `head`, NOT NULL**
+
+So:
+
+```c
+last->next == head
+```
+
+If you forget this once → list is broken.
+
+---
+
+## 🔥 LOOPING RULE (MOST IMPORTANT)
+
+### ❌ WRONG
+
+```c
+while(temp != NULL)
+```
+
+### ✅ CORRECT
+
+```c
+do {
+   ...
+   temp = temp->next;
+} while(temp != head);
+```
+
+**Why?**
+There is **no NULL** in circular list.
+
+---
+
+## 🔹 BASIC STATE CHECKS
+
+| Condition            | Meaning       |
+| -------------------- | ------------- |
+| `head == NULL`       | List empty    |
+| `head->next == head` | Only one node |
+
+You MUST check both.
+
+---
+
+## 🔹 1️⃣ INSERT OPERATIONS
+
+---
+
+### 🔸 A. Insert at BEGINNING
+
+#### Cases to Handle
+
+| Case       | Action                          |
+| ---------- | ------------------------------- |
+| Empty list | new → next = itself, head = new |
+| Non-empty  | find last → adjust links        |
+
+#### Key Logic
+
+```c
+last->next = new;
+new->next = head;
+head = new;
+```
+
+❌ Forgetting `last->next` = broken circle
+
+---
+
+### 🔸 B. Insert at END
+
+#### Cases
+
+| Case       | Action                  |
+| ---------- | ----------------------- |
+| Empty list | same as insert at begin |
+| Non-empty  | last → new → head       |
+
+#### Logic
+
+```c
+new->next = head;
+last->next = new;
+```
+
+---
+
+### 🔸 C. Insert at K-th Position
+
+#### MUST HANDLE
+
+| Case                          |
+| ----------------------------- |
+| List empty (only k=1 allowed) |
+| k = 1                         |
+| k > length+1                  |
+| Middle                        |
+| End                           |
+
+#### Loop Condition
+
+```c
+for(i = 1; i < k-1 && temp->next != head; i++)
+```
+
+---
+
+## 🔹 2️⃣ DELETE OPERATIONS (EXAM KILLER)
+
+---
+
+### 🔸 A. Delete at BEGINNING
+
+#### Cases
+
+| Case        | Action                  |
+| ----------- | ----------------------- |
+| Empty       | Underflow               |
+| Single node | free + head = NULL      |
+| Multiple    | last->next = head->next |
+
+#### Logic
+
+```c
+last->next = head->next;
+free(head);
+head = last->next;
+```
+
+---
+
+### 🔸 B. Delete at END
+
+#### Cases
+
+| Case     | Action              |
+| -------- | ------------------- |
+| Empty    | Underflow           |
+| Single   | free + head = NULL  |
+| Multiple | stop at second last |
+
+#### Loop
+
+```c
+while(temp->next->next != head)
+```
+
+---
+
+### 🔸 C. Delete by VALUE (**MOST IMPORTANT**)
+
+#### REQUIRED CASES
+
+| Case            | Mandatory |
+| --------------- | --------- |
+| Empty           | ✔         |
+| Value at head   | ✔         |
+| Value in middle | ✔         |
+| Value at last   | ✔         |
+| Value not found | ✔         |
+
+#### Loop
+
+```c
+while(curr->next != head && curr->data != value)
+```
+
+---
+
+### 🔸 D. Delete at K-th Position
+
+#### Must Check
+
+| Condition  |
+| ---------- |
+| Empty      |
+| k ≤ 0      |
+| k = 1      |
+| k > length |
+
+---
+
+## 🔹 3️⃣ TRAVERSE / DISPLAY
+
+### MUST USE DO-WHILE
+
+```c
+if(head == NULL) return;
+
+temp = head;
+do {
+   printf("%d ", temp->data);
+   temp = temp->next;
+} while(temp != head);
+```
+
+❌ `while(temp != NULL)` → infinite loop
+
+---
+
+## 🔹 4️⃣ SEARCH
+
+```c
+if(head == NULL) return NOT_FOUND;
+
+temp = head;
+do {
+   if(temp->data == key) return FOUND;
+   temp = temp->next;
+} while(temp != head);
+```
+
+---
+
+## 🔹 5️⃣ COUNT / LENGTH
+
+Same do-while logic.
+
+---
+
+## 🔹 6️⃣ COMMON EXAM TRAPS
+
+❌ Using `NULL` checks
+❌ Forgetting single node case
+❌ Wrong traversal condition
+❌ Losing circular link after insert/delete
+❌ Infinite loop
+❌ Not updating `head` correctly
+
+---
+
+## 🔥 ONE-LINE EXAM MEMORY TRICK
+
+```
+No NULL.
+Use do-while.
+Last always points to head.
+```
+
+---
+
+## 🧠 Brutal truth
+
+If you write circular list code **by copying singly list logic**,
+you **will fail**.
+
+Circular list is about **thinking in cycles**, not lines.
+
+---

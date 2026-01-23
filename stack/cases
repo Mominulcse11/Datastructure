@@ -1,0 +1,233 @@
+
+Below is the **same brutal, exam-ready cheat sheet**, but **for STACK**.
+
+No fluff. This is what actually gets marks.
+
+---
+
+# 📌 STACK — FUNCTION vs REQUIRED CHECKS (CHEAT SHEET)
+
+Covers:
+
+* Array Stack
+* Linked List Stack
+
+Logic is identical. Only **overflow condition changes**.
+
+---
+
+## 🔹 1️⃣ `push()` — INSERT (TOP SIDE)
+
+### ✅ MUST CHECK (in this order)
+
+| Check                  | Why                       |
+| ---------------------- | ------------------------- |
+| Stack full             | Overflow                  |
+| Heap full (LL)         | malloc failure            |
+| No need to check empty | Stack allows push anytime |
+
+---
+
+### 🔴 OVERFLOW CONDITIONS
+
+#### Array Stack
+
+```c
+if(top == size - 1)
+```
+
+#### Linked List Stack
+
+```c
+if(newNode == NULL)
+```
+
+---
+
+### 🔴 PUSH LOGIC (ORDER MATTERS)
+
+#### Array
+
+```c
+top++;
+stack[top] = value;
+```
+
+#### Linked List
+
+```c
+newNode->next = top;
+top = newNode;
+```
+
+No empty-case special handling needed.
+That’s why stack is easier than queue.
+
+---
+
+## 🔹 2️⃣ `pop()` — DELETE (TOP SIDE)
+
+### ✅ MUST CHECK
+
+| Check          | Why                  |
+| -------------- | -------------------- |
+| Stack empty    | Underflow            |
+| Single element | Last delete handling |
+
+---
+
+### 🔴 UNDERFLOW CONDITION
+
+#### Array
+
+```c
+if(top == -1)
+```
+
+#### Linked List
+
+```c
+if(top == NULL)
+```
+
+---
+
+### 🔴 POP LOGIC (CRITICAL ORDER)
+
+#### Array
+
+```c
+value = stack[top];
+top--;
+return value;
+```
+
+#### Linked List
+
+```c
+temp = top;
+value = temp->data;
+top = temp->next;
+free(temp);
+return value;
+```
+
+❌ decrement first = data lost
+❌ free before reading = garbage
+
+---
+
+## 🔹 3️⃣ `peek()` / `top()`
+
+### ✅ MUST CHECK
+
+| Check       | Why            |
+| ----------- | -------------- |
+| Stack empty | Invalid access |
+
+### Condition
+
+```c
+if(top == -1 || top == NULL)
+```
+
+### Action
+
+```c
+return topElement;
+```
+
+❌ Do NOT modify top.
+
+---
+
+## 🔹 4️⃣ `isEmpty()`
+
+### Condition
+
+#### Array
+
+```c
+top == -1
+```
+
+#### Linked List
+
+```c
+top == NULL
+```
+
+---
+
+## 🔹 5️⃣ `isFull()` (Array only)
+
+```c
+top == size - 1
+```
+
+Linked list stack is **never full** (unless heap dies).
+
+---
+
+## 🔹 6️⃣ `display()` / `print()`
+
+### MUST CHECK
+
+```c
+if(top == -1 || top == NULL)
+```
+
+### Print direction
+
+👉 **TOP → BOTTOM**
+
+Examiner checks this.
+
+---
+
+## 🔥 ONE-LINE MEMORY TRICK (STACK)
+
+### push():
+
+> full? → insert → move top
+
+### pop():
+
+> empty? → read → move top
+
+### peek():
+
+> empty? → read only
+
+---
+
+## 🧠 STACK STATE TRANSITIONS
+
+```
+EMPTY → PUSH → MANY → POP → ONE → POP → EMPTY
+```
+
+Only **TOP** moves.
+No front, no rear, no circular bullshit.
+
+---
+
+## 💀 COMMON EXAM KILLERS
+
+❌ Checking empty in push (wasted logic)
+❌ Forgetting `top = -1` initialization
+❌ Wrong order in pop
+❌ Printing bottom to top
+❌ Using queue conditions in stack
+
+---
+
+## 🔑 FINAL TRUTH (NO SUGARCOATING)
+
+If you can’t write stack correctly,
+you **don’t understand pointers or arrays** yet.
+
+Stack is the **baseline DS**.
+If this isn’t muscle memory,
+trees, recursion, DFS—সব ভেঙে পড়বে।
+
