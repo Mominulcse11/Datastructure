@@ -1,7 +1,7 @@
  🏛️ Master of Data Structures (CSE  0613 1237)
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=waving&color=00599C&height=200&section=header&text=SUST%20CSE%201237%20Lab&fontSize=50&animation=fadeIn" />
+  <img src="https://cdn-icons-png.freepik.com/256/6360/6360942.png?semt=ais_white_label" />
 </p>
 
 ## 🌌 Introduction
@@ -12,7 +12,7 @@ This repository contains my laboratory implementations and projects for the cour
 ---
 
 ## 🎓 Academic Context
-- **Course Code:** CSE 1237
+- **Course Code:** CSE 0613 1237
 - **Course Title:** Data Structures
 - **Level/Term:** 1st Year, 2nd Semester
 - **Institution:** SUST (CSE 2024 Batch)
@@ -27,23 +27,79 @@ This repository contains my laboratory implementations and projects for the cour
 
 ---
 
-## 📂 CSE 1237 Roadmap (C Implementation)
+## 📂 CSE 0613 1237 Roadmap (C Implementation)
+🔹 Linear Data Structures (Current Focus)
+- [x] Linked Lists
 
-### 🔹 Linear Data Structures
-- [x] **Linked Lists:** - [x] Singly Linked List (Basic Operations).
-  - [x] Recursive and Iterative Reversing.
-  - [x] Palindrome Detection.
-- [x] **Queues:**
-  - [x] Simple and Circular Queues.
-  - [x] **Priority Queue** (Array & Linked List Implementation).
-- [ ] **Stacks:** Applications in expression evaluation.
+- [x] Singly Linked List (Basic Operations: Insert, Delete, Find Mid)
 
-### 🔹 Non-Linear & Advanced
-- [ ] **Trees:** Binary Search Trees (BST), AVL Trees.
-- [ ] **Graphs:** BFS, DFS, and Shortest Path.
-- [ ] **Hashing:** Conflict resolution and hash functions.
+- [x] Recursive and Iterative Reversing
 
----
+- [x] Palindrome Detection
+
+- [x] Sorting & Merging (Merge Sort, Merge 2 Sorted Lists)
+
+- [x] Circular and Doubly Linked List Implementation
+
+- [ ] Next: Floyd’s Cycle Detection (Loop in LL)
+
+- [x] Queues
+
+[x] Simple Queue (Array & LL)
+
+- [x] Circular Queue
+
+- [x] Priority Queue (Array & LL Implementation)
+
+- [ ] Next: Deque (Double-Ended Queue)
+
+- [x] Stacks
+
+- [x] Implementation (Array & LL)
+
+- [x] Parentheses Balancing
+
+- [ ] Applications in Expression Evaluation
+
+- [ ] Infix to Postfix Conversion
+
+- [ ] Postfix Expression Evaluation
+
+🔸 Non-Linear Data Structures (Upcoming)
+- [ ] Trees
+
+- [ ] Binary Tree Basics
+
+- [ ] Binary Search Tree (BST) - Insertion, Deletion, Search
+
+- [ ] Tree Traversals (Inorder, Preorder, Postorder)
+
+- [ ] AVL Trees (Self-balancing)
+
+- [ ] Heaps (Max-Heap / Min-Heap)
+
+- [ ] Graphs
+
+- [ ] Adjacency Matrix & List Representation
+
+- [ ] BFS (Breadth-First Search)
+
+- [ ] DFS (Depth-First Search)
+
+- [ ] Shortest Path Algorithms (Dijkstra)
+
+- [ ] Hashing
+
+- [ ] Hash Table Implementation
+
+- [ ] Collision Handling (Chaining & Open Addressing)
+
+🛠️ Project Utilities
+- [x] .gitignore setup
+
+- [x] Error Handling Documentation
+
+- [x] Folder-wise Logic "Cases" (Markdown files)
 
 ## 🚀 Key Learning Milestones
 - **Memory Mastery:** Using `malloc`, `free`, and pointer arithmetic for efficient data handling.
