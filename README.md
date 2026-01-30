@@ -29,49 +29,50 @@ This repository contains my laboratory implementations and projects for the cour
 
 ## 📂 CSE 1237 Roadmap (C Implementation)
 
-Data Structure/
-├── linkedlist/
-│   ├── circular linked list/
-│   │   ├── cases circular.md
-│   │   └── implementation.c
-│   ├── doubly linked list/
-│   │   ├── cases doubly.md
-│   │   └── implementation.c
-│   └── singly linked list/
-│       ├── cases singly.md
-│       ├── delete.c
-│       ├── findmid.c
-│       ├── insert.c
-│       ├── merge2LL.c
-│       ├── mergesort.c
-│       ├── pelinndromeLL.c  <-- (Typo: palindrome)
-│       ├── removeduplicate+sorted+unsortedLL.c
-│       ├── reverse.c
-│       └── [NEW] detect_cycle.c
-├── queue/
-│   ├── cases.md
-│   ├── circulararray.c
-│   ├── comperison array and linkedlist.txt
-│   ├── linkedlistqueue.c
-│   ├── priorityqueuearr.c
-│   ├── priorityqueueLL.c
-│   └── [NEW] deque.c
-├── stack/
-│   ├── arrayimplimentation.c
-│   ├── balanceparanthesesstack.c
-│   ├── cases.md
-│   ├── linkedlistimplimetation.c
-│   ├── [NEW] infix_to_postfix.c
-│   └── [NEW] postfix_eval.c
-├── .gitignore
-├── errorhandeling.md
-└── README.md
+🔹 Linear Data Structures (Current Focus)
+[x] Linked Lists
+[x] Singly Linked List (Basic Operations: Insert, Delete, Find Mid)
+[x] Recursive and Iterative Reversing
+[x] Palindrome Detection
+[x] Sorting & Merging (Merge Sort, Merge 2 Sorted Lists)
+[x] Circular and Doubly Linked List Implementation
+[ ] Next: Floyd’s Cycle Detection (Loop in LL)
 
-### 🔹 Non-Linear & Advanced
-- [ ] **Trees:** Binary Search Trees (BST), AVL Trees.
-- [ ] **Graphs:** BFS, DFS, and Shortest Path.
-- [ ] **Hashing:** Conflict resolution and hash functions.
+[x] Queues
+[x] Simple Queue (Array & LL)
+[x] Circular Queue
+[x] Priority Queue (Array & LL Implementation)
+[ ] Next: Deque (Double-Ended Queue)
 
+[x] Stacks
+[x] Implementation (Array & LL)
+[x] Parentheses Balancing
+[ ] Applications in Expression Evaluation
+[ ] Infix to Postfix Conversion
+[ ] Postfix Expression Evaluation
+
+🔸 Non-Linear Data Structures (Upcoming)
+[ ] Trees
+[ ] Binary Tree Basics
+[ ] Binary Search Tree (BST) - Insertion, Deletion, Search
+[ ] Tree Traversals (Inorder, Preorder, Postorder)
+[ ] AVL Trees (Self-balancing)
+[ ] Heaps (Max-Heap / Min-Heap)
+
+[ ] Graphs
+[ ] Adjacency Matrix & List Representation
+[ ] BFS (Breadth-First Search)
+[ ] DFS (Depth-First Search)
+[ ] Shortest Path Algorithms (Dijkstra)
+
+[ ] Hashing
+[ ] Hash Table Implementation
+[ ] Collision Handling (Chaining & Open Addressing)
+
+🛠️ Project Utilities
+[x] .gitignore setup
+[x] Error Handling Documentation
+[x] Folder-wise Logic "Cases" (Markdown files)
 ---
 
 ## 🚀 Key Learning Milestones
