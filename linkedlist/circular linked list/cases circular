@@ -1,19 +1,16 @@
-<<<<<<< HEAD
-Good choice.
-Circular lists are where **lazy thinking gets punished**. One wrong condition → infinite loop → instant fail.
 
-Below is the **no-bullshit, exam-ready cheat sheet** for **CIRCULAR LINKED LIST**.
-
----
-=======
->>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2
 
 # 🔁 CIRCULAR LINKED LIST — COMPLETE CHEAT SHEET
 
 (Assume **singly circular linked list**)
 
 ---
-
+Operation,            1 Pointer (Head),      2 Pointers (Head + Tail)
+Insert at Front,      O(n),                  O(1)
+>>>>>>Insert at End,        O(n),                  O(1)
+Delete from Front,    O(n),                  O(1)
+Delete from End,      O(n),                  O(n)
+Traverse/Print,       O(n),                  O(n)
 ## 🧠 CORE RULE (NON-NEGOTIABLE)
 
 > **Last node’s `next` points to `head`, NOT NULL**

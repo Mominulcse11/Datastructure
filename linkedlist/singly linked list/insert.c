@@ -7,6 +7,7 @@ typedef struct Node {
 } node;
 
 node *head = NULL;
+node *tail = NULL;
 
 /* CREATE NODE */
 node* createnode(int value) {
@@ -23,27 +24,35 @@ node* createnode(int value) {
 /* INSERT AT BEGIN */
 void insertatbegin(int value) {
     node *temp = createnode(value);
-    if (temp == NULL) return;
-
+    if(temp==NULL){
+       printf("Heap overflow\n");
+       return;
+    }
+    if(head==NULL){
+        head =tail= temp;
+        printf("%d -> Inserted at begin\n", value);
+        return;
+    }
     temp->next = head;
     head = temp;
+    printf("%d -> Inserted at begin\n", value);
 }
 
 /* INSERT AT END */
-void insertatend(int value) {
-    node *t = createnode(value);
-    if (t == NULL) return;
-
-    if (head == NULL) {
-        head = t;
+void insertatend(int value){
+    node *temp = createnode(value);
+    if(temp==NULL){
+     printf("Heap overflow\n");
+     return;
+    }
+    if(head==NULL){
+        head =tail= temp;
+        printf("%d -> Inserted at nth\n", value);
         return;
     }
-
-    node *temp = head;
-    while (temp->next != NULL)
-        temp = temp->next;
-
-    temp->next = t;
+    tail->next = temp;
+    tail=temp;
+    printf("%d -> Inserted at nth\n", value);
 }
 
 /* INSERT AT Kth POSITION (1-based) */
@@ -106,7 +115,7 @@ int main() {
     insertatbegin(7);
 
     insertatend(5);
-    insertatkth(90, 5);
+    insertatkth(90, 1);
 
     print();
     return 0;

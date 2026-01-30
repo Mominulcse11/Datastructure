@@ -1,13 +1,10 @@
 
-<<<<<<< HEAD
-=======
-I’ll give you a **clean, no-nonsense checklist**. This is what you should **mentally scan before writing any queue code**.
 
----
-
->>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2
 # QUEUE — PRIMARY CASES & SPECIAL CONDITIONS (CHEAT CHECKLIST)
-
+Operation,Linked List (1 Pointer),Linked List (2 Pointers),Array (Fixed size)
+Enqueue,  O(n),           O(1),    O(1)
+Dequeue,  O(1),           O(1),    O(n) (Shifting proyojon hole)
+Peek,     O(1),           O(1),    O(1)
 ## 1️⃣ EMPTY QUEUE
 
 **Condition**

@@ -1,19 +1,14 @@
-<<<<<<< HEAD
-Good. Doubly linked list is where **people think it’s easier** and then silently lose marks.
-Why? Because now **two links must stay consistent**. Break one → instant bug.
 
-Below is a **strict, exam-grade DOUBLY LINKED LIST cheat sheet**.
-No fluff. This is **what to check, where, and why**.
-
----
-=======
-
->>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2
 
 # 🔁 DOUBLY LINKED LIST — COMPLETE CHEAT SHEET
 
 ---
-
+Operation,              1 Pointer (Head),                      2 Pointers (Head + Tail)
+Insert at Front,        O(1),                                  O(1)
+>>>>>>Insert at End,          O(n),                                  O(1)
+Delete from Front,      O(1),                                  O(1)
+>>>>>>Delete from End,        O(n),                                  O(1)
+Reverse Print,          Prothome traverse korte hoy (O(n)),     Sorasori shuru kora jay (O(n) but faster start)
 ## 🧠 NODE STRUCTURE (LOCK THIS IN)
 
 ```c

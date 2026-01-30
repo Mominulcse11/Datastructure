@@ -54,6 +54,10 @@ void insertatfront(int data){
 
 void insertatend (int data){//sir aita koraise
     node *temp = createnode(data);
+     if(temp==NULL){
+     printf("Heap overflow\n");
+     return;
+    }
    
         if(head==NULL){
             head = tail = temp;
@@ -65,12 +69,8 @@ void insertatend (int data){//sir aita koraise
         tail->next = temp;
         tail = temp;
         tail->next = head;
-        if (temp!=NULL){
-            printf("%d -> Inserted!\n", data);
-        }
-        else{
-            printf("Insertion failed!\n");
-        }
+        printf("%d -> Inserted!\n", data);
+      
 }
 void delete (int value){/*cases:
 1.List empty
@@ -134,12 +134,11 @@ void search(int value){
   int flag = 0;
 
   do {
-    if(temp->data!=value){
-        temp=temp->next;
-    }
-    else{
-        flag = 1;
-        break;
+    while(temp!=NULL){
+        if(temp->data==value){
+            flag=1;
+        }
+        temp = temp->next;
     }
   } while (temp != head);
   if(flag){
@@ -153,8 +152,9 @@ void search(int value){
 void print(){
     if(head==NULL){
         printf("Nothing to Print! \n");
+        return;
     }
-    else{
+   
         printf("Linked List : ");
         node *temp = head;
         do{
@@ -163,7 +163,7 @@ void print(){
         } while (temp != head);
         printf("Back to the head\n");
     }
-}
+
 
 
 int main(){

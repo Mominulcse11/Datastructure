@@ -1,11 +1,9 @@
-Good. Now we’re talking fundamentals.
-Linked list is where **most students lose marks**, not because it’s hard, but because they **miss edge cases**.
-Below is a **brutally honest, exam-grade cheat sheet** for **ALL linked list operations**.
-
-No storytelling. This is **what to check, where, and why**.
-
----
-
+Operation,              1 Pointer (Head),     2 Pointers (Head + Tail)
+Insert at Beginning,    O(1),                 O(1)
+>>>>>>Insert at End,          O(n),                 O(1)
+Delete from Beginning,  O(1),O(1)
+Delete from End,        O(n),                 O(n)
+Search,                 O(n),O(n)
 # 🔗 SINGLY LINKED LIST — COMPLETE ERROR-HANDLING CHEAT SHEET
 
 Applies to:
