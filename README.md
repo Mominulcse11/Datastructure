@@ -1,7 +1,7 @@
  🏛️ Master of Data Structures (CSE  0613 1237)
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/render?type=waving&color=00599C&height=200&section=header&text=SUST%20CSE%201237%20Lab&fontSize=50&animation=fadeIn" />
+  <img src="https://cdn-icons-png.freepik.com/256/6360/6360942.png?semt=ais_white_label" />
 </p>
 
 ## 🌌 Introduction
