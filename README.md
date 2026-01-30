@@ -29,14 +29,43 @@ This repository contains my laboratory implementations and projects for the cour
 
 ## 📂 CSE 1237 Roadmap (C Implementation)
 
-### 🔹 Linear Data Structures
-- [x] **Linked Lists:** - [x] Singly Linked List (Basic Operations).
-  - [x] Recursive and Iterative Reversing.
-  - [x] Palindrome Detection.
-- [x] **Queues:**
-  - [x] Simple and Circular Queues.
-  - [x] **Priority Queue** (Array & Linked List Implementation).
-- [ ] **Stacks:** Applications in expression evaluation.
+Data Structure/
+├── linkedlist/
+│   ├── circular linked list/
+│   │   ├── cases circular.md
+│   │   └── implementation.c
+│   ├── doubly linked list/
+│   │   ├── cases doubly.md
+│   │   └── implementation.c
+│   └── singly linked list/
+│       ├── cases singly.md
+│       ├── delete.c
+│       ├── findmid.c
+│       ├── insert.c
+│       ├── merge2LL.c
+│       ├── mergesort.c
+│       ├── pelinndromeLL.c  <-- (Typo: palindrome)
+│       ├── removeduplicate+sorted+unsortedLL.c
+│       ├── reverse.c
+│       └── [NEW] detect_cycle.c
+├── queue/
+│   ├── cases.md
+│   ├── circulararray.c
+│   ├── comperison array and linkedlist.txt
+│   ├── linkedlistqueue.c
+│   ├── priorityqueuearr.c
+│   ├── priorityqueueLL.c
+│   └── [NEW] deque.c
+├── stack/
+│   ├── arrayimplimentation.c
+│   ├── balanceparanthesesstack.c
+│   ├── cases.md
+│   ├── linkedlistimplimetation.c
+│   ├── [NEW] infix_to_postfix.c
+│   └── [NEW] postfix_eval.c
+├── .gitignore
+├── errorhandeling.md
+└── README.md
 
 ### 🔹 Non-Linear & Advanced
 - [ ] **Trees:** Binary Search Trees (BST), AVL Trees.
