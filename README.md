@@ -29,72 +29,51 @@ This repository contains my laboratory implementations and projects for the cour
 
 ## 📂 CSE 0613 1237 Roadmap (C Implementation)
 🔹 Linear Data Structures (Current Focus)
-- [x] Linked Lists
+### 🔗 Linked Lists
+- [x] **Singly Linked List**
+    - [x] Basic Operations: `insert.c`, `delete.c`, `findmid.c`
+    - [x] Recursive and Iterative Reversing
+    - [x] Palindrome Detection (`pelinndromeLL.c`)
+    - [x] Sorting & Merging (`mergesort.c`, `merge2LL.c`)
+- [x] **Circular Linked List** Implementation
+- [x] **Doubly Linked List** Implementation
+- [ ] **Next:** Floyd’s Cycle Detection (Loop in LL)
 
--    [x] Singly Linked List (Basic Operations: Insert, Delete, Find Mid)
 
-  -    [x] Recursive and Iterative Reversing
+### 📤 Queues
+- [x] **Simple Queue** (Array & LL Implementation)
+- [x] **Circular Queue** (Efficiency Optimized)
+- [x] **Priority Queue** (Array & LL Implementation)
+- [ ] **Next:** Deque (Double-Ended Queue)
 
-  -    [x] Palindrome Detection
 
-  -    [x] Sorting & Merging (Merge Sort, Merge 2 Sorted Lists)
+### 📥 Stacks
+- [x] **Implementation** (Array & LL)
+- [x] **Parentheses Balancing**
+- [ ] **Next:** Applications in Expression Evaluation
+    - [ ] Infix to Postfix Conversion
+    - [ ] Postfix Expression Evaluation
 
--    [x]  Circular Linked List Implementation
-        
--    [x]  Doubly Linked List Implementation
 
-- [ ] Next: Floyd’s Cycle Detection (Loop in LL)
+## 🔸 Non-Linear Data Structures (Upcoming)
 
-- [x] Queues
-
--    [x] Simple Queue (Array & LL)
-
--    [x] Circular Queue
-
--    [x] Priority Queue (Array & LL Implementation)
-
--    [ ] Next: Deque (Double-Ended Queue)
-
-- [x] Stacks
-
--    [x] Implementation (Array & LL)
-
--    [x] Parentheses Balancing
-
--    [ ] Applications in Expression Evaluation
-
--    [ ] Infix to Postfix Conversion
-
--    [ ] Postfix Expression Evaluation
-
-🔸 Non-Linear Data Structures (Upcoming)
-- [ ] Trees
-
--    [ ] Binary Tree Basics
-
--    [ ] Binary Search Tree (BST) - Insertion, Deletion, Search
-
--    [ ] Tree Traversals (Inorder, Preorder, Postorder)
-
--    [ ] AVL Trees (Self-balancing)
-
+### 🌳 Trees
+- [ ] Binary Tree Basics
+- [ ] Binary Search Tree (BST) - Insertion, Deletion, Search
+- [ ] Tree Traversals (Inorder, Preorder, Postorder)
+- [ ] AVL Trees (Self-balancing)
 - [ ] Heaps (Max-Heap / Min-Heap)
 
-- [ ] Graphs
 
--    [ ] Adjacency Matrix & List Representation
+### 🕸 Graphs
+- [ ] Adjacency Matrix & List Representation
+- [ ] BFS (Breadth-First Search)
+- [ ] DFS (Depth-First Search)
+- [ ] Shortest Path Algorithms (Dijkstra)
 
--    [ ] BFS (Breadth-First Search)
-
--    [ ] DFS (Depth-First Search)
-
--    [ ] Shortest Path Algorithms (Dijkstra)
-
-- [ ] Hashing
-
--    [ ] Hash Table Implementation
-
--    [ ] Collision Handling (Chaining & Open Addressing)
+### 🔑 Hashing
+- [ ] Hash Table Implementation
+- [ ] Collision Handling (Chaining & Open Addressing)
 
 🛠️ Project Utilities
 - [x] .gitignore setup
@@ -125,4 +104,3 @@ This repository contains my laboratory implementations and projects for the cour
 <p align="center">
   <i>"Data structures are the building blocks of efficient software."</i> 💻
 </p>
-
