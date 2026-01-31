@@ -49,7 +49,7 @@ void print (){
     printf(" NULL\n");
 }
 
-    node* reverseList(node* head) {
+node* reverseList(node* head) {
     node* prev , *current,*next;
     current=head;
     prev=NULL;
@@ -71,7 +71,7 @@ void reverselistrecursion(node* temp){
         return;
     }
     reverselistrecursion(temp->next);
-    node *temp1 = temp->next;//temp1 holo 9 .ar temp holo 2
+    node *temp1 = temp->next;//temp1 holo 9 .ar temp holo 2   in  3 -> 1 -> 7 -> 6 -> 2 -> 9 -> NULL
     temp1->next = temp;
     temp->next = NULL;
 }

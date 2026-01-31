@@ -1,0 +1,88 @@
+Data Structure (CSE 0613 1237)
+├─ errorhandeling
+│  ├─ malloc_check.c
+│  └─ input_validation.c
+
+├─ linkedlist
+│  ├─ circular linked list
+│  │  ├─ cases circular
+│  │  └─ implementation.c
+│  ├─ doubly linked list
+│  │  ├─ cases doubly
+│  │  └─ implementation.c
+│  └─ singly linked list
+│     ├─ cases singly
+│     ├─ delete.c
+│     ├─ findmid.c
+│     ├─ insert.c
+│     ├─ merge2LL.c
+│     ├─ mergesort.c
+│     ├─ palindromeLL.c
+│     ├─ removeduplicate_sorted_unsorted.c
+│     └─ reverse.c
+
+├─ stack
+│  ├─ arrayimplementation.c
+│  ├─ linkedlistimplementation.c
+│  ├─ balanceparenthesesstack.c
+│  ├─ cases
+│  ├─ stack.md
+│  └─ theory.md
+
+├─ queue
+│  ├─ arrayqueue.c
+│  ├─ linkedlistqueue.c
+│  ├─ CircularQueue
+│  │  └─ circulararray.c
+│  ├─ PriorityQueue
+│  │  ├─ priorityqueuearr.c
+│  │  └─ priorityqueueLL.c
+│  ├─ comparison_array_vs_linkedlist
+│  ├─ cases
+│  ├─ queue.md
+│  └─ theory.md
+
+├─ non_linear
+│  ├─ tree
+│  │  ├─ binary_tree
+│  │  │  ├─ traversal
+│  │  │  │  ├─ inorder.c
+│  │  │  │  ├─ preorder.c
+│  │  │  │  └─ postorder.c
+│  │  │  ├─ height.c
+│  │  │  ├─ count_nodes.c
+│  │  │  └─ implementation.c
+│  │  ├─ binary_search_tree
+│  │  │  ├─ insert.c
+│  │  │  ├─ delete.c
+│  │  │  ├─ search.c
+│  │  │  └─ cases
+│  │  └─ tree.md
+│
+│  ├─ heap
+│  │  ├─ maxheap.c
+│  │  ├─ minheap.c
+│  │  └─ heap.md
+│
+│  ├─ graph
+│  │  ├─ representation
+│  │  │  ├─ adjacency_matrix.c
+│  │  │  └─ adjacency_list.c
+│  │  ├─ traversal
+│  │  │  ├─ bfs.c
+│  │  │  └─ dfs.c
+│  │  ├─ cases
+│  │  └─ graph.md
+│
+│  └─ hashing
+│     ├─ linear_probing.c
+│     ├─ quadratic_probing.c
+│     ├─ chaining.c
+│     └─ hashing.md
+
+├─ theory
+│  ├─ tree_theory.md
+│  ├─ graph_theory.md
+│  └─ hashing_theory.md
+
+└─ README.md

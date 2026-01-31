@@ -1,9 +1,18 @@
 Operation,              1 Pointer (Head),     2 Pointers (Head + Tail)
+---------------------------------------------------------------------------------------
 Insert at Beginning,    O(1),                 O(1)
 >>>>>>Insert at End,          O(n),                 O(1)
 Delete from Beginning,  O(1),O(1)
 Delete from End,        O(n),                 O(n)
 Search,                 O(n),O(n)
+
+
+Condition,             Stops At...,                 Best For...
+----------------------------------------------------------------------------------------
+temp->next != tail,    Second-to-last node,         Deleting the tail.
+temp->next != NULL,    Last node,                   Appending a new node.
+temp != tail,          Last node,                   Fast traversal to the end.
+temp != NULL,          NULL (Past the list),        Printing or searching the whole list.
 # 🔗 SINGLY LINKED LIST — COMPLETE ERROR-HANDLING CHEAT SHEET
 
 Applies to:

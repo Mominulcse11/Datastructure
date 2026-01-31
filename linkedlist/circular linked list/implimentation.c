@@ -57,7 +57,7 @@ void insertatend (int data){//sir aita koraise
      if(temp==NULL){
      printf("Heap overflow\n");
      return;
-    }
+     }
    
         if(head==NULL){
             head = tail = temp;

@@ -64,12 +64,12 @@ void print(){
     }
 
     node *temp = head;
-    printf("Stack: ");
+    printf("Stack: \n");
     while(temp != NULL){
-        printf("%d -> ", temp->data);
+        printf("%d  \n", temp->data);
         temp = temp->next;
     }
-    printf("NULL\n");
+    
 }
 
 int main(){

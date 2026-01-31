@@ -70,9 +70,12 @@ temp=head;
   return temp;
 
   /* two pointer solution 
-  struct ListNode* middleNode(struct ListNode* head) {
-    struct ListNode* slow = head;
-    struct ListNode* fast = head;
+  node* middleNode(node* head) {
+
+  
+    node* slow = head;
+
+    node* fast = head;
 
     // Move fast pointer 2 steps and slow pointer 1 step
     // Check fast != NULL (for even list end) and fast->next != NULL (for odd list end)

@@ -102,11 +102,12 @@ void print_forward(){
         return;
     }
     node *temp = head;
-     printf("Linked List : ");
+     printf("Linked List : NULL<-> ");
     while (temp != NULL){
-            printf("%d -> ", temp->data);
+            printf("%d <-> ", temp->data);
             temp = temp->next;
     }
+    printf("NULL\n");
 }
 void print_backward(){
     if(head==NULL){
@@ -114,9 +115,9 @@ void print_backward(){
         return;
     }
     node *temp = tail;
-     printf("Linked List : ");
+     printf("Linked List : NULL<-> ");
     while (temp != NULL){
-            printf("%d -> ", temp->data);
+            printf("%d <-> ", temp->data);
             temp = temp->prev;
     }
     printf("NULL\n");

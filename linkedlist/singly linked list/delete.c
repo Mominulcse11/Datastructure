@@ -76,10 +76,10 @@ void deleteatend(){
         return;
     }
     node *temp = head;
-    while(temp->next!=tail){
+    while(temp->next!=tail){   //not temp->next!=NULL
         temp = temp->next;
     }
-    printf("%d ->Deleted at end\n", temp->data);
+    printf("%d ->Deleted at end\n", tail->data);
     
     free(tail);
     temp->next = NULL;
@@ -87,7 +87,8 @@ void deleteatend(){
     
 }
 
-/* DELETE BY VALUE *//* DELETE BY VALUE (Singly Linked List version) */
+/* DELETE BY VALUE */
+
 void deletebyvalue (int value){
     /*cases:
     1.List empty
@@ -121,17 +122,17 @@ void deletebyvalue (int value){
             
             // Case 3: Deleting head
             if(cur == head){
-                head = head->next;
+                head = head->next;//head update
             }
             
             // Case 4: Deleting tail
             else if(cur == tail){
-                tail = prev;
+                tail = prev;//tail updata
                 tail->next = NULL; 
             } 
             // Case 5: Deleting mid
             else{
-                prev->next = cur->next;
+                prev->next = cur->next;//right left re milao
             }
             free(cur);
             flag = 1;
