@@ -7,6 +7,7 @@ typedef struct Node {
 } node;
 
 node *head = NULL;
+node *tail = NULL;
 
 /* CREATE NODE */
 node* createnode(int value) {
@@ -22,25 +23,25 @@ node* createnode(int value) {
 
 /* INSERT AT END */
 void insertatend(int value) {
-    node *t = createnode(value);
-    if (t == NULL) return;
-
-    if (head == NULL) {
-        head = t;
+    node *temp = createnode(value);
+    if (temp == NULL) {
+        printf("Heap Overflow!\n");
         return;
     }
-
-    node *temp = head;
-    while (temp->next != NULL)
-        temp = temp->next;
-
-    temp->next = t;
+    if (head == NULL) {
+        head = tail=temp;
+        printf("%d -> Inserted\n", value);
+        return;
+    }
+    tail->next = temp;
+    tail = temp;
+      printf("%d -> Inserted\n", value);
 }
 
 /* PRINT LIST */
 void print() {
     if (head == NULL) {
-        printf("List is empty\n");
+        printf("List is empty!\n");
         return;
     }
 
@@ -51,6 +52,25 @@ void print() {
         temp = temp->next;
     }
     printf("NULL\n");
+}
+void  deleteatbegin(){
+    if(head == NULL){
+        printf("List is empty!\n");
+        return ;
+    }
+    node *temp = head;
+    printf("%d ->Deleted at begin\n", temp->data);
+    head = temp->next;
+    free(temp);
+
+}
+void deleteatend(){
+     if(head == NULL){
+        printf("List is empty!\n");
+        return ;
+    }
+
+
 }
 
 /* DELETE BY VALUE */
@@ -175,6 +195,7 @@ int main() {
     print();
 
     deletebyvalue(9);
+    deleteatbegin();
     print();
 
     /* Find node with value 7 */

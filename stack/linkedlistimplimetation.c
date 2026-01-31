@@ -21,34 +21,39 @@ node* createnode(int value){
 /* PUSH */
 void push(int value){
     node *temp = createnode(value);
-    if(temp == NULL){
-        printf("Stack overflow (Heap Full)\n");
+    if(temp==NULL){
+       printf("Heap overflow\n");
+       return;
+    }
+    if(head==NULL){
+        head = temp;
+        printf("%d ->Pushed\n", value);
         return;
     }
     temp->next = head;
     head = temp;
+    printf("%d ->Pushed\n", value);
 }
 
 /* POP */
-int pop(){
+void  pop(){
     if(head == NULL){
-        printf("Stack underflow!\n");
-        return -1;
+        printf("Empty Stack!\n");
+        return ;
     }
     node *temp = head;
-    int value = temp->data;
+    printf("%d ->POPPED\n", temp->data);
     head = temp->next;
     free(temp);
-    return value;
-}
 
+}
 /* TOP */
-int top(){
+void top(){
     if(head == NULL){
-        printf("Stack underflow!\n");
-        return -1;
+        printf("Empty stack!\n");
+        return ;
     }
-    return head->data;
+    printf("Top: %d\n", head->data);
 }
 
 /* PRINT */
@@ -71,12 +76,8 @@ int main(){
     push(10);
     push(20);
     push(30);
-
+    pop();
     print();
-
-    printf("Popped: %d\n", pop());
-    printf("Top: %d\n", top());
-
     print();
     return 0;
 }
