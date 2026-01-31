@@ -22,6 +22,7 @@ Subtasks include retrieving or removing the element at the top and decrementing 
 Stacks can be implemented using arrays or linked lists.
 >>> Array Implementation: Involves allocating a fixed-size array in memory and performing push/pop operations 
  with a check to prevent going out of bounds.
+
 >>>Linked List Implementation (Advantage): Uses dynamic memory allocation, so the stack only consumes the space
  required for its data elements, which prevents wastage of memory space, unlike fixed-size array-implemented stacks.
 
@@ -31,4 +32,5 @@ Stacks can be implemented using arrays or linked lists.
 
 Stacks are typically used in the implementation of:
 >>>System processes, such as compilation and program control.
+
 >>>Solutions to advanced systems problems such as recursion control and expression evaluation.
