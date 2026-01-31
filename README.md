@@ -1,17 +1,17 @@
- 🏛️ Master of Data Structures (CSE  0613 1237)
+ Master of Data Structures (CSE  0613 1237)
 
 <p align="center">
   <img src="https://cdn-icons-png.freepik.com/256/6360/6360942.png?semt=ais_white_label" />
 </p>
 
-## 🌌 Introduction
-This repository contains my laboratory implementations and projects for the course **CSE 1237: Data Structures** during my **2nd Semester** at **Shahjalal University of Science and Technology (SUST)**.
+## Introduction
+This repository contains my laboratory implementations and projects for the course **CSE  0613 1237: Data Structures** during my **2nd Semester** at **Shahjalal University of Science and Technology (SUST)**.
 
 > **Vision:** Mastering memory-efficient coding in **C**
 
 ---
 
-## 🎓 Academic Context
+## Academic Context
 - **Course Code:** CSE 0613 1237
 - **Course Title:** Data Structures
 - **Level/Term:** 1st Year, 2nd Semester
@@ -19,7 +19,7 @@ This repository contains my laboratory implementations and projects for the cour
 
 ---
 
-## 🛠️ Tech Stack & Tools
+##  Tech Stack & Tools
 - **Language:** `C` (Dynamic Memory Allocation focus)
 - **Platform:** `WSL (Ubuntu)` on E: Drive
 - **IDEs:** VS Code & GCC Compiler
@@ -27,9 +27,9 @@ This repository contains my laboratory implementations and projects for the cour
 
 ---
 
-## 📂 CSE 0613 1237 Roadmap (C Implementation)
+##  CSE 0613 1237 Roadmap (C Implementation)
 🔹 Linear Data Structures (Current Focus)
-### 🔗 Linked Lists
+###  Linked Lists
 - [x] **Singly Linked List**
     - [x] Basic Operations: `insert.c`, `delete.c`, `findmid.c`
     - [x] Recursive and Iterative Reversing
@@ -40,14 +40,14 @@ This repository contains my laboratory implementations and projects for the cour
 - [ ] **Next:** Floyd’s Cycle Detection (Loop in LL)
 
 
-### 📤 Queues
+###  Queues
 - [x] **Simple Queue** (Array & LL Implementation)
 - [x] **Circular Queue** (Efficiency Optimized)
 - [x] **Priority Queue** (Array & LL Implementation)
 - [ ] **Next:** Deque (Double-Ended Queue)
 
 
-### 📥 Stacks
+###  Stacks
 - [x] **Implementation** (Array & LL)
 - [x] **Parentheses Balancing**
 - [ ] **Next:** Applications in Expression Evaluation
@@ -57,7 +57,7 @@ This repository contains my laboratory implementations and projects for the cour
 
 ## 🔸 Non-Linear Data Structures (Upcoming)
 
-### 🌳 Trees
+###  Trees
 - [ ] Binary Tree Basics
 - [ ] Binary Search Tree (BST) - Insertion, Deletion, Search
 - [ ] Tree Traversals (Inorder, Preorder, Postorder)
@@ -65,24 +65,24 @@ This repository contains my laboratory implementations and projects for the cour
 - [ ] Heaps (Max-Heap / Min-Heap)
 
 
-### 🕸 Graphs
+###  Graphs
 - [ ] Adjacency Matrix & List Representation
 - [ ] BFS (Breadth-First Search)
 - [ ] DFS (Depth-First Search)
 - [ ] Shortest Path Algorithms (Dijkstra)
 
-### 🔑 Hashing
+###  Hashing
 - [ ] Hash Table Implementation
 - [ ] Collision Handling (Chaining & Open Addressing)
 
-🛠️ Project Utilities
+ Project Utilities
 - [x] .gitignore setup
 
 - [x] Error Handling Documentation
 
 - [x] Folder-wise Logic "Cases" (Markdown files)
 
-## 🚀 Key Learning Milestones
+##  Key Learning Milestones
 - **Memory Mastery:** Using `malloc`, `free`, and pointer arithmetic for efficient data handling.
 - **Problem Solving:** Implementing algorithms
 - **Clean Documentation:** Following best practices for academic and professional code sharing.
@@ -91,8 +91,8 @@ This repository contains my laboratory implementations and projects for the cour
 
 
 
-## 📬 Connect & Collaborate
-
+##  Connect & Collaborate
+-**Mominul Islam**
 - **University:** SUST CSE
 - **Focus:** Data Structures, Algorithms, and Cryptography
 
