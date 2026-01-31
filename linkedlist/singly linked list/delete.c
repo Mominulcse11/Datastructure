@@ -73,38 +73,66 @@ void deleteatend(){
 
 }
 
-/* DELETE BY VALUE */
-void deletebyvalue(int value) {
-    if (head == NULL) {
-        printf("List is empty\n");
+/* DELETE BY VALUE *//* DELETE BY VALUE (Singly Linked List version) */
+void deletebyvalue (int value){
+    /*cases:
+    1.List empty
+    2.Single node list
+    3.Value at head
+    4.Value at tail
+    5.Value in middle
+    6.Value not found*/
+    
+    int flag = 0;
+    
+    // Case 1: List empty
+    if(head==NULL){
+       printf("Empty List!\n");
+       return;
+    }
+    
+    node *cur = head;
+    node *prev = NULL; 
+
+    // Case 2: Single node list
+    if(head==tail && head->data==value){
+        free(head);
+        head = tail = NULL;
+        flag = 1;
+        printf("%d -> Deleted!\n",value);
         return;
     }
-
-    node *temp = head;
-    node *prev = NULL;
-
-    /* Value at head */
-    if (temp->data == value) {
-        head = temp->next;
-        free(temp);
-        return;
+    while (cur != NULL) { 
+        if(cur->data == value){
+            
+            // Case 3: Deleting head
+            if(cur == head){
+                head = head->next;
+            }
+            
+            // Case 4: Deleting tail
+            else if(cur == tail){
+                tail = prev;
+                tail->next = NULL; 
+            } 
+            // Case 5: Deleting mid
+            else{
+                prev->next = cur->next;
+            }
+            free(cur);
+            flag = 1;
+            break; 
+        }
+        prev = cur;
+        cur = cur->next;
     }
-
-    /* Search value */
-    while (temp != NULL && temp->data != value) {
-        prev = temp;
-        temp = temp->next;
+    if(flag == 1){
+        printf("%d -> Deleted!\n", value);
     }
-
-    if (temp == NULL) {
-        printf("Value not found\n");
-        return;
+    else{
+        printf("%d Not Found!\n", value);
     }
-
-    prev->next = temp->next;
-    free(temp);
 }
-
 /* DELETE AT Kth POSITION (1-based) */
 void deleteatkth(int k) {
     if (head == NULL || k <= 0) {
