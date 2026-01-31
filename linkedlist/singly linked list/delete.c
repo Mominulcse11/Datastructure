@@ -69,8 +69,22 @@ void deleteatend(){
         printf("List is empty!\n");
         return ;
     }
-
-
+    if (head->next == NULL) {
+        printf("%d -> Deleted at end\n", head->data);
+        free(head);
+        head = tail = NULL;
+        return;
+    }
+    node *temp = head;
+    while(temp->next!=tail){
+        temp = temp->next;
+    }
+    printf("%d ->Deleted at end\n", temp->data);
+    
+    free(tail);
+    temp->next = NULL;
+    tail = temp;
+    
 }
 
 /* DELETE BY VALUE *//* DELETE BY VALUE (Singly Linked List version) */
@@ -224,6 +238,7 @@ int main() {
 
     deletebyvalue(9);
     deleteatbegin();
+    deleteatend();
     print();
 
     /* Find node with value 7 */
