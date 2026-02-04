@@ -1,3 +1,13 @@
+/*
+deleteatbegin() – Removes the first node (Head).
+deleteatend() – Removes the last node (Tail).
+deletebyvalue(int value) – Searches for a specific number and deletes it.
+deleteatkth(int k) – Deletes a node at a specific position (e.g., the 5th node).
+deleteNodeWithoutHead(node *temp) – Deletes a node given only a pointer to that specific node.
+deleteMiddle() – Finds the center of the list and removes it.
+deleteOddPositionNode() – Removes nodes at positions 1, 3, 5, etc.
+deleteEvenPositionNode() – Removes nodes at positions 2, 4, 6, etc.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -114,7 +124,7 @@ void deletebyvalue (int value){
         free(head);
         head = tail = NULL;
         flag = 1;
-        printf("%d -> Deleted!\n",value);
+        printf("%d -> Deleted by value!\n",value);
         return;
     }
     while (cur != NULL) { 
@@ -142,7 +152,7 @@ void deletebyvalue (int value){
         cur = cur->next;
     }
     if(flag == 1){
-        printf("%d -> Deleted!\n", value);
+        printf("%d -> Deleted by value!\n", value);
     }
     else{
         printf("%d Not Found!\n", value);
@@ -217,16 +227,70 @@ node* deleteMiddle() {
 return head;
 
 }
+void deleteOddPositionNode(){
+    if(head == NULL){
+        printf("List is empty!\n");
+        return ;
+    }
+
+    node *temp = head;
+    head = head->next;
+
+    free(temp);
+    if(head == NULL)
+        return;
+    node *curr = head;
+    while(curr!=NULL && curr->next!= NULL ){
+        temp = curr->next;//temp is the odd node
+        curr->next = temp->next;
+        free(temp);
+        if (temp == tail) {
+            tail = curr;
+        }
+        curr = curr->next;//cuur be the next even 
+    }
+
+}
+void deleteEvenPositionNode() {
+
+    if(head==NULL || head->next==NULL){
+        printf("There is not even to delete !\n ");
+        return;
+    }
+    node *temp = head;
+    node *curr = head;
+
+    while(curr!=NULL && curr->next!= NULL ){
+        temp = curr->next;//temp is the even  node
+        curr->next = temp->next;
+        if (temp == tail) {
+            tail = curr;
+        }
+        free(temp);
+        curr = curr->next;//cuur be the next odd
+    }
+
+
+}
 
 /* MAIN */
 int main() {
 
     insertatend(3);
-    insertatend(1);
+    insertatend(12);
     insertatend(7);
-    insertatend(6);
+    insertatend(600);
     insertatend(2);
     insertatend(9);
+    insertatend(356);
+    insertatend(1);
+    insertatend(8);
+    insertatend(44);
+    insertatend(100);
+    insertatend(99);
+    insertatend(1003);
+    insertatend(2);
+    insertatend(999);
 
     print();
 
@@ -247,11 +311,18 @@ int main() {
     while (node7 != NULL && node7->data != 7) {
         node7 = node7->next;
     }
+    printf("After deleting Node without head the Linked list    : ");
 
     deleteNodeWithoutHead(node7);
     print();
     node *todelete = deleteMiddle();
-    printf("After deleting the middle the linked list is : \n");
+    printf("After deleting the middle the linked list is        : ");
+    print();
+    printf("After deleting the odd nodes. the linked list is    : ");
+    deleteOddPositionNode();
+    print();
+    printf("After deleting the even  nodes. the linked list is  : ");
+    deleteEvenPositionNode();
     print();
 
     return 0;

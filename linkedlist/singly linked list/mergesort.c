@@ -87,6 +87,16 @@ node* mergeSort(node* head) {
 
     return merge(left, right);
 }
+int check_sorted(){
+    node *temp = head;
+    while(temp->next!=NULL){
+        if(temp->data > temp->next->data){
+            return 0;
+        }
+        temp = temp->next;
+    }
+    return 1;
+}
 
 
 
@@ -102,9 +112,18 @@ int main(){
 
 
     print();
+    if(check_sorted()==1){
+        printf("The list is sorted!\n");
+    }
+    else  printf("The list is not sorted!\n");
+
     head=mergeSort(head);
     printf("Ater Merge Sort : ");
     print();
+    if(check_sorted()==1){
+        printf("The list is sorted!\n");
+    }
+    else  printf("The list is not sorted!\n");
 
     return 0;
 }

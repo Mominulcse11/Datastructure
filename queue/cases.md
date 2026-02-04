@@ -1,5 +1,4 @@
 
-
 # QUEUE — PRIMARY CASES & SPECIAL CONDITIONS (CHEAT CHECKLIST)
 Operation,Linked List (1 Pointer),Linked List (2 Pointers),Array (Fixed size)
 Enqueue,  O(n),           O(1),    O(1)
@@ -54,17 +53,6 @@ This is where most people screw up.
 
 ### Array queue
 
-<<<<<<< HEAD
----------------------------------
-if(front == -1)
-    front = 0;
----------------------------------
-### Linked list queue
-
----------------------------------
-front = rear = newNode;
----------------------------------
-=======
 ```c
 if(front == -1)
     front = 0;
@@ -76,7 +64,6 @@ if(front == -1)
 front = rear = newNode;
 ```
 
->>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2
 **Must handle in**
 
 * `enqueue`
@@ -91,23 +78,6 @@ Another classic bug.
 
 ### Array queue
 
-<<<<<<< HEAD
----------------------------------
-if(front > rear)
-    front = rear = -1;
----------------------------------
-### Circular queue
-
-if(front == rear)
-    front = rear = -1;
----------------------------------
-### Linked list queue
-
----------------------------------
-if(front == NULL)
-    rear = NULL;
----------------------------------
-=======
 ```c
 if(front > rear)
     front = rear = -1;
@@ -127,7 +97,6 @@ if(front == NULL)
     rear = NULL;
 ```
 
->>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2
 **Must handle in**
 
 * `dequeue`
@@ -151,20 +120,14 @@ Wrong order → lost data.
 
 **Condition**
 
-<<<<<<< HEAD
----------------------------------
-index = (index + 1) % size;
----------------------------------
-=======
 ```c
 index = (index + 1) % size;
 ```
 
->>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2
 Used in:
 
-* enqueue
-* dequeue
+* `enqueue`
+* `dequeue`
 
 Forget modulo → array out-of-bounds.
 
@@ -174,16 +137,10 @@ Forget modulo → array out-of-bounds.
 
 When:
 
-<<<<<<< HEAD
----------------------------------
-front == rear
----------------------------------
-=======
 ```c
 front == rear
 ```
 
->>>>>>> 1c45c7bf69eb75ba7b8bff31bf899add01aeb6b2
 Must handle separately in:
 
 * `dequeue`

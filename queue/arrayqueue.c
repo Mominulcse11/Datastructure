@@ -37,7 +37,7 @@ void dequeue(){
     }
 }
 void frontel(){
-    if(front>0){
+    if(front>=0){
         printf("Front -> %d\n",  queue[front]);
     }
     else{
@@ -45,7 +45,7 @@ void frontel(){
     }
 }
 void rearel(){
-    if(rear<capacity && rear>0){
+    if(rear<capacity && rear>=0){
         printf("Rear -> %d\n", queue[rear]);
     }
     else{

@@ -49,7 +49,11 @@ void print (){
     printf(" NULL\n");
 }
 
-node* reverseList(node* head) {
+void reverseList() {
+    
+    if (head == NULL || head->next == NULL) {
+        return; 
+    }
     node* prev , *current,*next;
     current=head;
     prev=NULL;
@@ -59,7 +63,7 @@ node* reverseList(node* head) {
         prev=current ;
         current=next;
     }
-    return prev;
+    head= prev;
 }
 void reverselistrecursion(node* temp){
     /*node *temp = head;মারাত্মক লজিক ভুল (node *temp = head): আপনি ফাংশনের শুরুতে temp = head লিখেছেন। 
@@ -87,7 +91,7 @@ int main(){
     insertatend(9);
 
     print();
-    head=reverseList(head);//aikhane head  dite bhule gesilam
+    reverseList();
     printf("AFTER REVERSE THE LIST: ");
     print();
     reverselistrecursion(head);//aikhane head  dite bhule gesilam

@@ -75,12 +75,14 @@ This repository contains my laboratory implementations and projects for the cour
 - [ ] Hash Table Implementation
 - [ ] Collision Handling (Chaining & Open Addressing)
 
- Project Utilities
+## 📚 Documentation & Theory
+- [**Introduction to Data Structures**](docs/introduction_to_ds.md)
+- [**Beginner's Cheat Sheet: Error Handling**](docs/error_handling_guide.md) - *Must Read!*
+- [**Project Structure Map**](project_structure.txt)
+
+##  Project Utilities
 - [x] .gitignore setup
-
-- [x] Error Handling Documentation
-
-- [x] Folder-wise Logic "Cases" (Markdown files)
+- [x] Organized Directory Structure (`docs/`, `stack/`, `queue/`, `linkedlist/`)
 
 ##  Key Learning Milestones
 - **Memory Mastery:** Using `malloc`, `free`, and pointer arithmetic for efficient data handling.
